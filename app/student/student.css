@@ -1,0 +1,61 @@
+.custom-button{
+    max-height: 40px;
+    min-width: 100px;
+}
+
+.custom-button-right{
+    float: right;   
+    margin-right: 5px; 
+}
+
+.student-list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.student-list-header-add {
+    max-height: 40px;   
+    min-width: 100px; 
+}
+
+.mynav{
+        background: #333;
+        height: 48px;
+}
+body {margin: 0;}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #111;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+    .mynav{background: #111;}
+}
+
+select{
+    height: 30px;
+    width: 250px;
+}

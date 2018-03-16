@@ -1,0 +1,19 @@
+.custom-button{
+    max-height: 40px;
+    min-width: 100px;
+}
+.custom-button-right{
+    float: right;   
+    margin-right: 5px; 
+}
+
+.course-list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course-list-header-add {
+    max-height: 40px;   
+    min-width: 100px; 
+}

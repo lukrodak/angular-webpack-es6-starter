@@ -1,0 +1,27 @@
+<!-- <button ng-click="$ctrl.add()">
+    Add
+</button> -->
+<!-- <p ng-repeat="item in $ctrl.getCoursesData">
+        <b ng-click="$ctrl.getCourse(item.id)">{{ item.name }}</b> -->
+        <!-- <b ui-sref="app.course.detail({id: item.id})" ng-click="$ctrl.getCourse(item.id)">{{ item.name }}</b> -->
+        <!-- <a ui-sref="app.test.detail({id: item.id})">{{ item.name }}</a> -->
+    <!-- <b ng-click="$ctrl.getCourses()">The button has been clicked {{count}} times. {{item.id}}</b> -->
+<!-- </p> -->
+
+<!-- 
+<button ng-click="$ctrl.getCourse('1')">cas</button>
+<button ng-click="count = count + 1" ng-init="count=0">OK</button>
+
+<p>The button has been clicked {{count}} times.</p> -->
+
+    <div class="container">
+        <div class="course-list-header">
+            <h2 class="course-list-header-title">Lista kursów</h2>
+            <button ng-click="$ctrl.add()" class="btn btn-primary course-list-header-add">
+                    Dodaj
+            </button>
+        </div>
+        <div>
+          <a  ng-repeat="item in $ctrl.coursesData" class="list-group-item" ng-click="$ctrl.getCourse(item.id)">{{ item.name }}</a>
+        </div>
+    </div>

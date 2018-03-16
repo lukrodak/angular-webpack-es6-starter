@@ -1,0 +1,7 @@
+<p>
+    TestListComponent
+</p>
+
+<p ng-repeat="item in $ctrl.items">
+    <a ui-sref="app.test.detail({id: item.id})">{{ item.name }}</a>
+</p>

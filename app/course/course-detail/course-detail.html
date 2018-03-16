@@ -1,0 +1,40 @@
+<div class="container">
+    <h2 class="student-list-header-title">Szczegółowe informacje o kursie</h2>
+    <form ng-submit="$ctrl.submitForm()">
+        <fieldset ng-disabled="$ctrl.isSubmitting">
+
+            <fieldset class="form-group">
+            <input class="form-control"
+                type="text"
+                placeholder="Nazwa"
+                ng-model="$ctrl.courseData.name" 
+                ng-disabled="$ctrl.isSaved" required/>
+            </fieldset>
+
+            <fieldset class="form-group">
+            <textarea class="form-control form-control-lg"
+                rows="8"
+                placeholder="Opis"
+                ng-model="$ctrl.courseData.description"
+                ng-disabled="$ctrl.isSaved" required>
+            </textarea>
+            </fieldset>
+            <a ui-sref="app.course.list()" class="btn btn-primary custom-button">Wstecz</a>
+            <button class="btn btn-primary custom-button custom-button-right" type="submit" ng-disabled="$ctrl.isSaved">
+            <span ng-if="$ctrl.isSaved">Przetwarzanie</span> 
+            <span ng-if="!$ctrl.isSaved">Uaktualnij</span>
+            </button>
+            <a ng-click="$ctrl.deleteCourse()" class="btn btn-danger custom-button custom-button-right" ng-disabled="$ctrl.isSaved">
+                    <span ng-if="$ctrl.isSaved">Przetwarzanie</span> 
+                    <span ng-if="!$ctrl.isSaved">Usuń</span>           
+            </a>
+
+        </fieldset>
+    </form>
+    <div ng-hide="!$ctrl.courseData.students[0]">
+        <h3>Uczestnicy</h3>
+        <div>
+            <span ng-repeat="item in $ctrl.courseData.students" class="list-group-item">{{item.first_name}} {{item.last_name}}</span>
+        </div>
+    </div>
+</div>

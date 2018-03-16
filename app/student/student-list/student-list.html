@@ -1,0 +1,11 @@
+<div class="container">
+        <div class="student-list-header">
+            <h2 class="student-list-header-title">Lista studentów</h2>
+            <button ng-click="$ctrl.add()" class="btn btn-primary student-list-header-add">
+                    Dodaj
+            </button>
+        </div>
+        <div>
+          <a  ng-repeat="item in $ctrl.getStudentsData" class="list-group-item" ng-click="$ctrl.getStudent(item.id)">{{ item.first_name }}</a>
+        </div>
+    </div>
